@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { z } from "zod";
 import { BookOpen } from "lucide-react";
-import { useTranslations } from "@/hooks/useTranslations";
+
 interface IFormInput {
 	username: string;
 }
@@ -31,7 +31,7 @@ const FormPage: React.FC = () => {
 	const onSubmit: SubmitHandler<IFormInput> = (data: { username: string }) => {
 		console.log(data);
 	};
-	const { t } = useTranslations();
+
 	return (
 		<div className="p-4">
 			<form
@@ -56,7 +56,7 @@ const FormPage: React.FC = () => {
 					type="submit"
 					className="py-2 px-4 bg-blue-500 text-white rounded"
 				>
-					{t("hello")}
+					Hello
 				</button>
 			</form>
 		</div>
